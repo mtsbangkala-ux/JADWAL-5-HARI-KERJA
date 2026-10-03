@@ -1,0 +1,7 @@
+{
+  "name": "Jadwal Mengajar Anti Bentrok MTsN 3 Jeneponto (5 Hari Kerja)",
+  "description": "Aplikasi jadwal pelajaran anti bentrok 5 hari kerja untuk MTsN 3 Jeneponto Tahun Ajaran 2026/2027 lengkap dengan matriks resmi, jadwal per guru, jadwal per kelas, dan cetak.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

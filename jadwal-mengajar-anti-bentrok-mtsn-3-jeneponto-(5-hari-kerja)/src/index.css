@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 3mm 4mm;
+  }
+
+  html, body {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    overflow: visible !important;
+  }
+
+  /* Prevent overflow clipping on all wrappers */
+  div, section, main, article, table, tbody, tr, td, th {
+    overflow: visible !important;
+    max-height: none !important;
+  }
+
+  /* Table optimizations for complete PDF printing */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-collapse: collapse !important;
+    page-break-inside: auto;
+  }
+
+  tr, .print-keep-together {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Compact matrix table for Master Matrix print view */
+  .print-matrix-table {
+    font-size: 6.5pt !important;
+    line-height: 1.1 !important;
+    width: 100% !important;
+  }
+
+  .print-matrix-table th,
+  .print-matrix-table td {
+    padding: 1px 1.5px !important;
+    word-break: break-word !important;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .print\:block {
+    display: block !important;
+  }
+
+  .print\:grid-cols-12 {
+    display: grid !important;
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  }
+
+  .print\:col-span-7 {
+    grid-column: span 7 / span 7 !important;
+  }
+
+  .print\:col-span-5 {
+    grid-column: span 5 / span 5 !important;
+  }
+
+  .print-page-break {
+    break-after: page !important;
+    page-break-after: always !important;
+  }
+
+  .print-single-page {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .print-single-page:last-child {
+    break-after: auto !important;
+    page-break-after: auto !important;
+  }
+}
